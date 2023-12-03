@@ -1,0 +1,26 @@
+{% include "header.html" %}
+
+<div class="main-container">
+    <h1>Generátor map</h1>
+    <p>
+        Stačí zadat rozměry a hotovo...
+    </p>
+
+    <form method="post" action="{{ url_for('map') }}">
+        <label for="map_height">Zadej výšku: </label>
+        <input id="map_height" type="text" name="map_height" maxlength="2" value="10" required> <br>
+        <label for="map_width">Zadej šířku: </label>
+        <input id="map_width" type="text" name="map_width" maxlength="2" value="10" required> <br>
+
+        <input type="radio" id="carcasonne" name="map_type" value="carcasonne" checked>
+        <label for="carcasonne">Carcasonne mapa</label><br>
+        <input type="radio" id="hrad" name="map_type" value="castle">
+        <label for="hrad">Mapa hradu</label><br>
+        <input type="radio" id="cesty" name="map_type" value="routes">
+        <label for="cesty">Barevné cesty</label><br>
+
+        <input type="submit" value="Vygeneruj">
+    </form>
+</div>
+
+{% include "footer.html" %}

@@ -1,0 +1,18 @@
+{% include "header.html" %}
+
+
+<div class="main-container">
+    <h1>Mapa:</h1>
+    <div class="map">
+        {%for i in range(height)%}
+        <div class="map-row">
+            {%for j in range(width)%}
+            <img src="{{ url_for('static', filename=addresses[i*width + j]) }}"
+                class="rotate_image{{rotations[i*width + j]}} map-square" alt="Map square">
+            {%endfor%}
+        </div>
+        {%endfor%}
+    </div>
+</div>
+
+{% include "footer.html" %}
