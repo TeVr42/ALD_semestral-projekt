@@ -16,7 +16,7 @@ flask run
 A pak už jen rozkliknout link...
 
 ## Podstata generování
-Při volbě mapy se načtou dlaždice ze složky s obrázky. Každý takový obrázek se uloží do úložiště dlaždic 4x - nejen ve své původní podobě, ale také pootočený o 90, 180 a 270 stupňů, tím se rozšiřuje množství možných umístěných dlaždic.
+Při volbě mapy se načtou dlaždice ze složky s obrázky. Každý takový obrázek se uloží do úložiště dlaždic 4x - nejen ve své původní podobě, ale také pootočený o 90, 180 a 270 stupňů, tím se rozšiřuje množství možných umístěných dlaždic. Pootočení zařizují styly css, ke každé dlaždici je tak uchovávána nejen cesta k souboru, ale i pootočení a nové pořadí okrajů.
 
 Generování začíná náhodným výběrem počáteční dlaždice. 
 
